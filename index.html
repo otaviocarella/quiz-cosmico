@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Cósmico - Teste Seus Conhecimentos</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="particles" id="particles"></div>
+
+    <div class="container" id="quiz-container">
+        <header>
+            <h1>Quiz Cósmico</h1>
+            <p>Teste seus conhecimentos e descubra seu nível!</p>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </header>
+
+        <main>
+            <div id="start-screen" class="active">
+                <div class="start-content">
+                    <h2>Bem-vindo ao Quiz Cósmico!</h2>
+                    <p>Prepare-se para uma jornada através de conhecimentos curiosos e fascinantes. Responda
+                        corretamente às perguntas e descubra seu nível cósmico!</p>
+                    <div class="btn-container">
+                        <button id="start-btn" class="btn">Iniciar Quiz</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="question-container">
+                <div class="question-header">
+                    <span id="question-number">Pergunta 1/10</span>
+                    <span id="timer">20s</span>
+                </div>
+
+                <div class="question-text" id="question-text">
+                </div>
+
+                <div class="options-container" id="options-container">
+                </div>
+
+                <div class="time-bar-container">
+                    <div class="time-bar" id="time-bar"></div>
+                </div>
+            </div>
+
+            <div id="results-screen">
+                <div class="results-content">
+                    <h2>Resultado Final</h2>
+                    <div class="score-container">
+                        <div class="score-circle">
+                            <span class="score-value" id="score-value">0</span>
+                            <div class="score-fill" id="score-fill"></div>
+                        </div>
+                        <p class="score-text" id="score-text">Seu nível cósmico</p>
+                    </div>
+                    <div class="results-message" id="results-message">
+                    </div>
+                    <div class="btn-container">
+                        <button id="restart-btn" class="btn">Reiniciar Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        particlesJS("particles", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
